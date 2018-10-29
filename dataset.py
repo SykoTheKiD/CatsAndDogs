@@ -9,15 +9,6 @@ def get_name(path):
     fname = path.split('.')
     return fname[0]
 
-
-def get_class(path):
-    name = get_name(path)
-    if name == "cat":
-        return np.array([1, 0])
-    else:
-        return np.array([0, 1])
-
-
 def prepare_folders(test_size, repopulate=False):
     base_dir = os.path.abspath("data")
     train_dir = os.path.join(base_dir, "train")
